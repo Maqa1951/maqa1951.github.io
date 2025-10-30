@@ -3,41 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lüks sevənlərin səhifəsi</title>
+  <title>Maqalux</title>
 
-  <!-- Favicon (logo brauzer tabında) -->
   <link rel="icon" href="logo.png" type="image/png">
 
-  <!-- SEO Meta Təsviri -->
   <meta name="description" content="Xoş Gəldiniz – Faydalı məlumatlar, əyləncəli məzmun və gündəlik həyat üçün tövsiyələr.">
 
-  <!-- Sosial Media üçün Open Graph -->
   <meta property="og:title" content="Xoş Gəldiniz – Faydalı və Əyləncəli" />
   <meta property="og:description" content="Faydalı məlumatlar, əyləncəli məzmun və gündəlik həyat üçün tövsiyələr." />
   <meta property="og:image" content="logo.png" />
   <meta property="og:type" content="website" />
-  <!-- Sadə stil -->
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background:#F0FFFF;
-      color: #333;
+      background:#F0F8FF; 
+      color: black;
     }
     header {
-      background: #708090;
-      color: red;
+      background: #FFFFFF;
+      color: black;
       padding: 15px;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
     }
     header img {
       height: 50px;
-      margin-right: 50px;
+      margin-right: 40px;
     }
     nav {
-      background: #708090;
+      background: #FFFFFF;
+      flex-grow: 1;
     }
     nav ul {
       list-style: none;
@@ -52,12 +51,22 @@
     nav ul li a {
       display: block;
       padding: 12px 20px;
-      color: white;
+      color: black;
       text-decoration: none;
+      font-weight: bold;
+      background: #FFFFFF;
+      transition: background 0.3s, color 0.3s; /* 🔹 Keçid effekti */
+      border-radius: 3px;
     }
     nav ul li a:hover {
-      background: #575757;
+      background: #FFD700;
+      color: black;
     }
+    /* Aktiv səhifə üçün (məsələn, Xəbərlər) */
+    nav ul li a.active {
+      background: #FFD700;
+    }
+
     main {
       padding: 20px;
       max-width: 900px;
@@ -69,11 +78,11 @@
     footer {
       text-align: center;
       padding: 15px;
-      background: #708090;
-      color: white;
+      background: #FFFFFF;
+      color: black;
       margin-top: 20px;
+      font-weight: bold;
     }
-    /* Mobil üçün */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -84,39 +93,36 @@
       }
       nav ul li a {
         padding: 10px;
-        border-top: 1px solid #575757;
+        border-top: 1px solid #ddd;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://maqalux.github.io
-/Picsart_25-10-28_10-01-29-931.png" alt="Xoş Gəldiniz saytının loqosu">
-      <nav>
-    <ul>
-      <li><a href="#">Ana Səhifə</a></li>
-      <li><a href="#">Məqalələr</a></li>
-      <li><a href="https://www.banutascifresko.com/h%C9%99ll%C9%99r/doktor-m%c9%99n-n%c9%99-yeyim/?lang=az" target="_blank" rel="noopener noreferrer">Diyet Məsləhətləri</a></li>
-      <li><a href="#">Əyləncə</a></li>
-      <li><a href="#">Haqqımızda</a></li>
-      <li><a href="#">Əlaqə</a></li>
-    </ul>
-  </nav>
+    <img src="https://maqalux.github.io/Picsart_25-10-28_10-01-29-931.png" alt="Xoş Gəldiniz saytının loqosu">
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Xəbərlər</a></li>
+        <li><a href="#">Proqramlar</a></li>
+        <li><a href="#">Şahmat</a></li>
+        <li><a href="#">Əyləncə</a></li>
+        <li><a href="#">Haqqımızda</a></li>
+        <li><a href="#">Əlaqə</a></li>
+      </ul>
+    </nav>
   </header>
 
-  
-
   <main>
-    <h2>Faydalı Məlumat</h2>
+    <h1>Faydalı Məlumat</h1>
     <p>Burada müxtəlif faydalı və maraqlı məlumatlar yerləşdirilə bilər. Məsələn, gündəlik həyat üçün tövsiyələr, texnologiya yenilikləri və ya sağlamlıq məsləhətləri.</p>
 
-    <h2>Əyləncə Bölməsi</h2>
+    <h1>Əyləncə Bölməsi</h1>
     <p>Burada əyləncəli oyunlar, videolar və ya maraqlı xəbərlər ola bilər. İstifadəçilərin xoşuna gələcək məzmun əlavə etmək üçün yaxşı yer.</p>
   </main>
 
   <footer>
-    &copy; 2025 Maqalux - Bütün hüquqlar qorunur.
+   &copy; 2025 Maqalux - Bütün hüquqlar qorunur.
   </footer>
 </body>
 </html>
