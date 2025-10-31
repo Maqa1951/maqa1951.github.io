@@ -4,16 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maqalux</title>
-
   <link rel="icon" href="logo.png" type="image/png">
-
+  <link rel="stylesheet" href="style.css">
   <meta name="description" content="Xoş Gəldiniz – Faydalı məlumatlar, əyləncəli məzmun və gündəlik həyat üçün tövsiyələr.">
-
   <meta property="og:title" content="Xoş Gəldiniz – Faydalı və Əyləncəli" />
   <meta property="og:description" content="Faydalı məlumatlar, əyləncəli məzmun və gündəlik həyat üçün tövsiyələr." />
   <meta property="og:image" content="logo.png" />
   <meta property="og:type" content="website" />
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -101,28 +98,40 @@
 <body>
   <header>
     <img src="https://maqalux.github.io/Picsart_25-10-28_10-01-29-931.png" alt="Xoş Gəldiniz saytının loqosu">
-    <nav>
+        <nav>
       <ul>
-        <li><a href="#" class="active">Xəbərlər</a></li>
-        <li><a href="#">Proqramlar</a></li>
-        <li><a href="#">Şahmat</a></li>
-        <li><a href="#">Əyləncə</a></li>
-        <li><a href="#">Haqqımızda</a></li>
-        <li><a href="#">Əlaqə</a></li>
-      </ul>
+        <li><a href="index.html">Ana səhifə</a></li>
+        <li><a href="xeberler.html">Xəbərlər</a></li>
+        <li><a href="proqramlar.html">Proqramlar</a></li>
+        <li><a href="şahmat.html">Şahmat</a></li>
+        <li><a href="eylence.html">Əyləncə</a></li>
+        <li><a href="haqqimizda.html">Haqqımızda</a></li>
+        <li><a href="elaqe.html">Əlaqə</a></li>
+      </ul> 
     </nav>
   </header>
-
   <main>
-    <h1>Faydalı Məlumat</h1>
-    <p>Burada müxtəlif faydalı və maraqlı məlumatlar yerləşdirilə bilər. Məsələn, gündəlik həyat üçün tövsiyələr, texnologiya yenilikləri və ya sağlamlıq məsləhətləri.</p>
-
-    <h1>Əyləncə Bölməsi</h1>
-    <p>Burada əyləncəli oyunlar, videolar və ya maraqlı xəbərlər ola bilər. İstifadəçilərin xoşuna gələcək məzmun əlavə etmək üçün yaxşı yer.</p>
+    <h1>Ana səhifə</h1>
+    <p>Maqalux saytına xoş gəlmisiniz! Burada faydalı məlumatlar, xəbərlər və əyləncəli məzmun tapa bilərsiniz.</p>
   </main>
-
-  <footer>
-   &copy; 2025 Maqalux - Bütün hüquqlar qorunur.
+    <footer>
+    &copy; 2025 Maqalux - Bütün hüquqlar qorunur.
   </footer>
+    <!-- Aktiv səhifəni avtomatik vurğulamaq -->
+  <script>
+    const links = document.querySelectorAll('nav ul li a');
+    const currentUrl = window.location.href;
+    links.forEach(link => {
+      if (link.href === currentUrl) {
+        link.classList.add('active');
+      }
+
+      // Kliklənəndə sarı rəngdə qalsın
+      link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
